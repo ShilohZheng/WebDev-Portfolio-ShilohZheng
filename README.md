@@ -18,19 +18,6 @@ Welcome to my web development portfolio! This repository contains the source cod
 - CSS3 (Flexbox/Grid)
 - JavaScript (ES6+)
 
-## Project Structure
-
-```
-WebDev-Portfolio/
-├── index.html
-├── about.html
-├── projects.html
-├── contact.html
-├── styles/
-├── scripts/
-├── images/
-└── README.md
-```
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
