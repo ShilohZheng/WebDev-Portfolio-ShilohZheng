@@ -6,11 +6,7 @@ Welcome to my web development portfolio! This repository contains the source cod
 
 ## Features
 
-- Responsive design that works on all devices
-- Project showcase section
-- About me section with skills
-- Contact form
-- Clean, modern UI
+
 
 ## Technologies Used
 
