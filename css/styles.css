@@ -1,10 +1,11 @@
 :root {
-  --sky-blue: #A6D7E3; 
-  --mint-green: #A7E8A9; 
-  --lavender-purple: #D3A8F5; 
-  --soft-pink: #F8D7D7; 
-  --soft-yellow: #F5F5A0; 
+  --sky-blue: #A6D7E3;
+  --mint-green: #A7E8A9;
+  --lavender-purple: #D3A8F5;
+  --soft-pink: #F8D7D7;
+  --soft-yellow: #F5F5A0;
   --text-color: #333333;
+  --dark-text-color: #000000;
 }
 
 * {
@@ -16,28 +17,30 @@
 body {
   font-family: "Times New Roman", Times, serif;
   background-color: var(--sky-blue);
-  color: var(--text-color);
-  line-height: 1.8; /* 增加行间距，提升可读性 */
+  color: var(--dark-text-color);
+  line-height: 1.8;
   padding: 0 2em;
-  font-size: 1.2em; /* 设置默认字体大小 */
+  font-size: 1.2em;
 }
 
 header {
   background-color: var(--mint-green);
   color: white;
-  padding: 3em 0; /* 增加顶部间距 */
+  padding: 3em 0;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 3em; /* 加大标题文字 */
+  font-size: 3em;
   margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header p {
-  font-size: 1.5em; /* 增加副标题的大小 */
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 nav {
@@ -54,14 +57,16 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2em; /* 增加链接文字大小 */
+  font-size: 1.2em;
   padding: 0.5em;
   transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 5px;
 }
 
 nav a:hover {
   background-color: var(--lavender-purple);
-  border-radius: 5px;
+  border-color: var(--dark-text-color);
 }
 
 main {
@@ -77,29 +82,34 @@ section {
 }
 
 h2 {
-  font-size: 2.5em; /* 加大小节标题文字 */
+  font-size: 2.5em;
   color: var(--mint-green);
   margin-bottom: 1em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 p {
-  font-size: 1.3em; /* 增加段落文字的大小 */
+  font-size: 1.3em;
   margin-bottom: 1.5em;
+  font-weight: normal;
 }
 
 button {
   background-color: var(--soft-yellow);
-  color: var(--text-color);
-  border: none;
-  padding: 1em 2em; /* 增大按钮的大小 */
+  color: var(--dark-text-color);
+  border: 2px solid var(--dark-text-color);
+  padding: 1em 2em;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 1.2em; /* 增加按钮文字大小 */
+  font-size: 1.2em;
+  font-family: "Times New Roman", Times, serif;
 }
 
 button:hover {
   background-color: var(--lavender-purple);
+  color: white;
+  border-color: white;
 }
 
 footer {
