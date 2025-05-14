@@ -1,78 +1,87 @@
+/* Morandi color palette */
+:root {
+  --color-primary: #c3b7a6;
+  --color-secondary: #a7a5a5;
+  --color-accent: #d8cfc4;
+  --text-dark: #333;
+  --text-light: #fff;
+  --background: #f5f5f3;
+  --highlight: #8d8d8a;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f1ee;
-  color: #333;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
   line-height: 1.6;
 }
 
-header {
-  background-color: #dcd4cb;
-  padding: 1.5rem;
+header, footer {
+  background-color: var(--color-primary);
+  color: var(--text-light);
+  padding: 1em;
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin: 0;
+  background-color: var(--color-secondary);
+  padding: 0.5em;
+  gap: 1em;
 }
 
 nav a {
+  color: var(--text-light);
   text-decoration: none;
-  color: #5e5a58;
   font-weight: bold;
+  padding: 0.5em;
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  color: #9c8f88;
+  background-color: var(--highlight);
+  border-radius: 5px;
 }
 
 main {
-  padding: 2rem;
+  padding: 2em;
   max-width: 900px;
   margin: auto;
+  background-color: var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #dcd4cb;
-  margin-top: 2rem;
-  color: #5e5a58;
+h1, h2, h3 {
+  font-family: "Georgia", serif;
+  color: var(--text-dark);
+}
+
+section {
+  margin-bottom: 2em;
 }
 
 img {
   max-width: 100%;
-  height: auto;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 button {
-  padding: 0.5rem 1rem;
-  background-color: #b5a89f;
-  color: white;
+  background-color: var(--highlight);
+  color: var(--text-light);
   border: none;
-  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #9c8f88;
+  background-color: var(--text-dark);
 }
 
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  main {
-    padding: 1rem;
-  }
+footer {
+  font-size: 0.9em;
 }
-
