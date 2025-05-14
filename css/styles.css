@@ -1,11 +1,10 @@
-/* 淡色系配色方案 */
 :root {
-  --sky-blue: #A6D7E3; /* 天空蓝 */
-  --mint-green: #A7E8A9; /* 薄荷绿 */
-  --lavender-purple: #D3A8F5; /* 薰衣草紫 */
-  --soft-pink: #F8D7D7; /* 淡粉色 */
-  --soft-yellow: #F5F5A0; /* 淡黄色 */
-  --text-color: #333333; /* 深灰色文本 */
+  --sky-blue: #A6D7E3; 
+  --mint-green: #A7E8A9; 
+  --lavender-purple: #D3A8F5; 
+  --soft-pink: #F8D7D7; 
+  --soft-yellow: #F5F5A0; 
+  --text-color: #333333;
 }
 
 * {
