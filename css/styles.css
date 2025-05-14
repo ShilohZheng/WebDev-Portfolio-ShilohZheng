@@ -1,0 +1,90 @@
+/* Stardew Valley-inspired color palette */
+:root {
+  --color-primary: #90be6d; /* Grass Green */
+  --color-secondary: #f4d35e; /* Sunshine Yellow */
+  --color-accent: #f5cac3; /* Light Wood Orange */
+  --color-background: #a9def9; /* Sky Blue */
+  --color-footer: #6c584c; /* Tree Brown */
+  --color-text: #333333; /* Dark Text */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: var(--color-footer);
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary);
+  padding: 1em;
+  gap: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+}
+
+main {
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+  background-color: var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+  font-family: "Times New Roman", Times, serif;
+  color: var(--color-text);
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+  padding: 0.7em 1.2em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-primary);
+}
+
+footer {
+  font-size: 0.9em;
+}
