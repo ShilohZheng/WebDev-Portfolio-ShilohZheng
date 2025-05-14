@@ -1,9 +1,10 @@
 :root {
-  --primary-color: #6dbf6f; 
-  --secondary-color: #f2d94b; 
-  --background-color: #f2f6fc; 
-  --text-color: #333333; 
-  --content-bg: #f5f5f5; 
+  --sky-blue: #A6D7E3; 
+  --mint-green: #A7E8A9; 
+  --lavender-purple: #D3A8F5; 
+  --soft-pink: #F8D7D7; 
+  --soft-yellow: #F5F5A0; 
+  --text-color: #333333;
 }
 
 * {
@@ -14,17 +15,19 @@
 
 body {
   font-family: "Times New Roman", Times, serif;
-  background-color: var(--background-color);
+  background-color: var(--sky-blue);
   color: var(--text-color);
   line-height: 1.6;
   padding: 0 2em;
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color: var(--mint-green);
   color: white;
   padding: 2em 0;
   text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -40,8 +43,10 @@ nav {
   display: flex;
   justify-content: center;
   gap: 2em;
-  background-color: var(--primary-color);
+  background-color: var(--mint-green);
   padding: 1em 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 nav a {
@@ -54,12 +59,12 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--lavender-purple);
   border-radius: 5px;
 }
 
 main {
-  background-color: var(--content-bg);
+  background-color: var(--soft-pink);
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -72,17 +77,18 @@ section {
 
 h2 {
   font-size: 2em;
-  color: var(--primary-color);
+  color: var(--mint-green);
   margin-bottom: 0.5em;
 }
 
 p {
   font-size: 1.1em;
+  margin-bottom: 1em;
 }
 
 button {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--soft-yellow);
+  color: var(--text-color);
   border: none;
   padding: 0.8em 1.5em;
   border-radius: 6px;
@@ -92,7 +98,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--primary-color);
+  background-color: var(--lavender-purple);
 }
 
 footer {
@@ -100,7 +106,7 @@ footer {
   text-align: center;
   margin-top: 2em;
   padding: 1em;
-  background-color: var(--primary-color);
+  background-color: var(--mint-green);
   color: white;
+  border-radius: 8px;
 }
-
