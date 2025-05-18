@@ -8,116 +8,219 @@
   --light-green: #C8E6C9;  
   --light-orange: #FFE0B2; 
   --light-yellow: #FFF9C4;  
-  --text-color: #000000;
+  --text-color: #000000;  
 }
 
-/* Base Styles */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: var(--text-color);
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header, footer {
-  background-color: var(--deep-blue);
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-nav {
-  background-color: var(--deep-purple);
-  padding: 0.5rem;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: var(--light-blue);
+  color: var(--text-color);
+  line-height: 1.8;
+  padding: 0 2em;
+  font-size: 1.2em;
+  min-height: 100vh;
 }
 
 /* Page-specific backgrounds */
-#accessibility {
-  background-color: var(--light-green);
-  min-height: 100vh;
-}
-
-#behind {
-  background-color: var(--light-purple);
-  min-height: 100vh;
-}
-
-#portfolio {
+body#home {
   background-color: var(--light-blue);
-  min-height: 100vh;
 }
 
-#goal {
+body#accessibility {
+  background-color: var(--light-green);
+}
+
+body#behind {
+  background-color: var(--light-purple);
+}
+
+body#portfolio {
+  background-color: var(--light-blue);
+}
+
+body#goal {
   background-color: var(--light-yellow);
-  min-height: 100vh;
 }
 
-#design {
+body#design {
   background-color: var(--light-orange);
-  min-height: 100vh;
 }
 
-/* Content container */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+header {
+  background-color: var(--light-green);
+  color: var(--deep-blue);
+  padding: 3em 0;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2em;
 }
 
-/* Simple hover effect */
-a:hover {
-  text-decoration: underline;
+header h1 {
+  font-size: 3.5em;  
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Add to existing styles.css */
-.color-swatch {
+header p {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+nav {
   display: flex;
-  gap: 1rem;
-  margin: 1rem 0;
+  justify-content: center;
+  gap: 2em;
+  background-color: var(--light-orange);
+  padding: 1em 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin: 2em 0;
 }
 
-.color-swatch div {
-  border: 1px solid var(--text-color);
-  border-radius: 4px;
-}
-
-pre {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
-/* Simple animation example */
-button, a {
+nav a {
+  color: var(--deep-blue);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 0.5em;
   transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 5px;
 }
 
-button:hover, a:hover {
+nav a:hover {
+  background-color: var(--light-yellow);
+  border-color: var(--deep-blue);
+  transform: translateY(-2px);
+}
+
+main {
+  background-color: white;
+  padding: 3em;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 3em 0;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+h2 {
+  font-size: 2.8em;  
+  color: var(--deep-purple);
+  margin-bottom: 1em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 2em;
+  color: var(--deep-green);
+  margin: 1.5em 0 1em;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+ul, ol {
+  font-size: 1.4em;
+  margin-left: 2em;
+  margin-bottom: 1.5em;
+}
+
+li {
+  margin-bottom: 0.8em;
+}
+
+button {
+  background-color: var(--light-yellow);
+  color: var(--deep-blue);
+  border: 2px solid var(--deep-blue);
+  padding: 1em 2em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.3em;
+  font-family: "Times New Roman", Times, serif;
+  margin: 1em 0;
+}
+
+button:hover {
+  background-color: var(--deep-blue);
+  color: white;
+  border-color: white;
   transform: scale(1.05);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+footer {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 3em;
+  padding: 1.5em;
+  background-color: var(--light-green);
+  color: var(--deep-blue);
+  border-radius: 8px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Color swatches for design page */
+.color-swatch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 2em 0;
+}
+
+.swatch {
+  padding: 2em;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Code blocks for behind-the-scenes */
+pre {
+  background-color: #f5f5f5;
+  padding: 1.5em;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 1.2em;
+  margin: 1.5em 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1em;
+    font-size: 1em;
   }
   
-  .container {
-    padding: 1rem;
+  header h1 {
+    font-size: 2.5em;
+  }
+  
+  nav {
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+  }
+  
+  main {
+    padding: 1.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
   }
 }
