@@ -81,3 +81,43 @@ nav a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Add to existing styles.css */
+.color-swatch {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.color-swatch div {
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+}
+
+pre {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* Simple animation example */
+button, a {
+  transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+}
