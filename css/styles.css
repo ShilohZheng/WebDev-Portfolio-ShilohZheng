@@ -23,7 +23,7 @@ body {
   color: var(--text-color);
   line-height: 1.8;
   padding: 0 2em;
-  font-size: 1.2em;
+  font-size: 1.0em;
 }
 
 header {
@@ -42,7 +42,7 @@ header h1 {
 }
 
 header p {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
 }
 
@@ -60,7 +60,7 @@ nav a {
   color: var(--deep-blue);
   text-decoration: none;
   font-weight: bold;
-  font-size: 2.0em;
+  font-size: 1.3em;
   padding: 0.5em;
   transition: background-color 0.3s ease;
   border: 2px solid transparent;
@@ -92,7 +92,7 @@ h2 {
 }
 
 p {
-  font-size: 1.2em; 
+  font-size: 1.5em;
   margin-bottom: 1.5em;
 }
 
@@ -125,21 +125,21 @@ footer {
 }
 
 #accessibility {
-  background-color: var(--light-green);
+  background-color: var(--light-green);  /* accessibility 页面淡绿色背景 */
 }
 
 #behind {
-  background-color: var(--light-purple);
+  background-color: var(--light-purple);  /* behind 页面淡紫色背景 */
 }
 
 #portfolio {
-  background-color: var(--light-blue);
+  background-color: var(--light-blue);  /* portfolio 页面淡蓝色背景 */
 }
 
 #goal {
-  background-color: var(--light-yellow);
+  background-color: var(--light-yellow);  /* goal 页面淡黄色背景 */
 }
 
 #design {
-  background-color: var(--light-orange);
+  background-color: var(--light-orange);  /* design 页面淡橙色背景 */
 }
