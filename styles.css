@@ -73,52 +73,32 @@ header p {
   font-weight: bold;
 }
 
-/* 优化后的横版导航菜单 */
 nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
   background-color: var(--light-orange);
   padding: 1em 0;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   margin: 2em 0;
-  width: 100%;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 0.8em;
-  flex-wrap: wrap;
-  padding: 0 1em;
-}
-
-nav li {
-  margin: 0;
-  white-space: nowrap;
 }
 
 nav a {
   color: var(--deep-blue);
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.1em;
-  padding: 0.5em 0.8em;
+  font-size: 1.3em;
+  padding: 0.5em;
   transition: all 0.3s ease;
   border: 2px solid transparent;
   border-radius: 5px;
-  display: inline-block;
 }
 
 nav a:hover {
   background-color: var(--light-yellow);
   border-color: var(--deep-blue);
   transform: translateY(-2px);
-}
-
-/* 当前页面高亮 */
-nav a[aria-current="page"] {
-  background-color: var(--light-yellow);
-  border-color: var(--deep-blue);
 }
 
 main {
@@ -219,19 +199,7 @@ pre {
   margin: 1.5em 0;
 }
 
-/* 响应式设计 */
-@media (max-width: 1200px) {
-  nav ul {
-    justify-content: flex-start;
-    gap: 0.6em;
-  }
-  
-  nav a {
-    font-size: 1em;
-    padding: 0.5em 0.7em;
-  }
-}
-
+/* Responsive design */
 @media (max-width: 768px) {
   body {
     padding: 0 1em;
@@ -243,13 +211,9 @@ pre {
   }
   
   nav {
-    padding: 0.5em 0;
-  }
-  
-  nav ul {
     flex-direction: column;
     gap: 0.5em;
-    align-items: center;
+    padding: 1em;
   }
   
   main {
@@ -258,24 +222,5 @@ pre {
   
   h2 {
     font-size: 2em;
-  }
-}
-
-@media (max-width: 480px) {
-  nav a {
-    padding: 0.4em 0.6em;
-    font-size: 0.9em;
-  }
-  
-  header {
-    padding: 2em 0;
-  }
-  
-  header h1 {
-    font-size: 2em;
-  }
-  
-  header p {
-    font-size: 1.2em;
   }
 }
