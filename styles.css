@@ -73,10 +73,8 @@ header p {
   font-weight: bold;
 }
 
+/* 横版导航菜单样式 */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 2em;
   background-color: var(--light-orange);
   padding: 1em 0;
   border-radius: 10px;
@@ -84,15 +82,28 @@ nav {
   margin: 2em 0;
 }
 
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
+}
+
 nav a {
   color: var(--deep-blue);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.3em;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   transition: all 0.3s ease;
   border: 2px solid transparent;
   border-radius: 5px;
+  display: inline-block;
 }
 
 nav a:hover {
@@ -210,10 +221,9 @@ pre {
     font-size: 2.5em;
   }
   
-  nav {
+  nav ul {
     flex-direction: column;
     gap: 0.5em;
-    padding: 1em;
   }
   
   main {
