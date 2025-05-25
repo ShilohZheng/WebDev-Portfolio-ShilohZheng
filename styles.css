@@ -1,49 +1,30 @@
-/* =============================================
-   GLOBAL STYLES & VARIABLES
-   ============================================= */
-
+/* ==================== 基础样式 ==================== */
 :root {
-  /* 主色调定义 */
+  /* 颜色定义 */
   --deep-blue: #003366;
   --deep-purple: #6A1D9A;
   --deep-green: #006400;
   --deep-orange: #FF5722;
-  
   --light-blue: #B3E5FC;
   --light-purple: #E1BEE7;
   --light-green: #C8E6C9;
   --light-orange: #FFE0B2;
   --light-yellow: #FFF9C4;
-  
   --text-color: #000000;
   --white: #FFFFFF;
+  --black: #000000;
+  --gray: #808080;
   
-  /* 间距变量 */
+  /* 字体定义 */
+  --main-font: "Times New Roman", Times, serif;
+  
+  /* 间距定义 */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
-  
-  /* 边框半径 */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  
-  /* 阴影 */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
-  
-  /* 过渡效果 */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease;
 }
-
-/* =============================================
-   BASE STYLES
-   ============================================= */
 
 * {
   margin: 0;
@@ -56,438 +37,334 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  font-family: var(--main-font);
   color: var(--text-color);
-  background-color: var(--light-blue);
+  line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* =============================================
-   TYPOGRAPHY
-   ============================================= */
+/* ==================== 通用组件样式 ==================== */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Georgia', serif;
-  line-height: 1.2;
-  margin-bottom: var(--space-md);
+/* 导航栏 - 横向布局 */
+nav {
+  background-color: var(--light-orange);
+  padding: var(--space-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: var(--deep-blue);
-}
-
-h2 {
-  font-size: 2rem;
-  color: var(--deep-purple);
-}
-
-h3 {
-  font-size: 1.75rem;
-  color: var(--deep-green);
-}
-
-p {
-  margin-bottom: var(--space-md);
-  font-size: 1.1rem;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color var(--transition-fast);
-}
-
-/* =============================================
-   LAYOUT COMPONENTS
-   ============================================= */
-
-.container {
-  width: 100%;
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: var(--space-md);
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
 
-/* =============================================
-   HEADER & NAVIGATION (横向排版)
-   ============================================= */
-
-header {
-  background-color: var(--light-green);
-  padding: var(--space-md) 0;
-  box-shadow: var(--shadow-md);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--deep-blue);
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: var(--space-lg);
-}
-
-nav li {
-  position: relative;
-}
-
 nav a {
-  padding: var(--space-xs) 0;
-  font-weight: 500;
   color: var(--deep-blue);
-  border-bottom: 2px solid transparent;
-  transition: all var(--transition-normal);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: var(--space-xs) var(--space-sm);
+  transition: all 0.3s ease;
+  border-radius: 4px;
 }
 
 nav a:hover {
-  color: var(--deep-purple);
-  border-bottom-color: var(--deep-purple);
+  background-color: var(--light-yellow);
+  transform: translateY(-2px);
 }
 
 nav a.active {
-  color: var(--deep-orange);
-  border-bottom-color: var(--deep-orange);
-  font-weight: 600;
-}
-
-/* 下拉菜单样式 (为未来扩展准备) */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--white);
-  min-width: 200px;
-  box-shadow: var(--shadow-lg);
-  border-radius: var(--radius-sm);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* =============================================
-   PAGE-SPECIFIC BACKGROUNDS & THEMES
-   ============================================= */
-
-/* 首页 - Home */
-body#home {
-  background-color: var(--light-blue);
-}
-
-/* 作品集 - Portfolio */
-body#portfolio {
-  background-color: var(--light-purple);
-}
-
-/* 全球目标 - Goal */
-body#goal {
   background-color: var(--light-yellow);
+  border-bottom: 3px solid var(--deep-orange);
 }
 
-/* 设计 - Design */
-body#design {
-  background-color: var(--light-orange);
+/* 页眉 */
+header {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
-/* 无障碍 - Accessibility */
-body#accessibility {
-  background-color: var(--light-green);
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
 }
 
-/* 幕后 - Behind */
-body#behind {
-  background-color: var(--light-purple);
-}
-
-/* =============================================
-   MAIN CONTENT AREA
-   ============================================= */
-
+/* 主要内容区域 */
 main {
   flex: 1;
-  padding: var(--space-xl) 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-md) var(--space-xl);
 }
 
-.hero {
+/* 页脚 */
+footer {
+  background-color: var(--light-green);
+  color: var(--deep-blue);
   text-align: center;
-  padding: var(--space-xl) 0;
-  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  margin-top: var(--space-xl);
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: var(--space-md);
-}
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 800px;
-  margin: 0 auto var(--space-lg);
-}
-
-/* =============================================
-   CARD COMPONENTS (用于作品集等)
-   ============================================= */
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--space-lg);
-  margin: var(--space-lg) 0;
-}
-
+/* 卡片样式 */
 .card {
   background-color: var(--white);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
 }
 
-.card-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: var(--space-md);
-}
-
-.card-title {
-  font-size: 1.25rem;
-  margin-bottom: var(--space-sm);
-  color: var(--deep-blue);
-}
-
-/* =============================================
-   BUTTONS & INTERACTIVE ELEMENTS
-   ============================================= */
-
+/* 按钮样式 */
 .btn {
   display: inline-block;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-sm);
-  font-weight: 500;
-  text-align: center;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--light-blue);
+  color: var(--deep-blue);
+  border: 2px solid var(--deep-blue);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
   cursor: pointer;
-  transition: all var(--transition-normal);
-  border: none;
 }
 
-.btn-primary {
+.btn:hover {
   background-color: var(--deep-blue);
   color: var(--white);
 }
 
-.btn-primary:hover {
-  background-color: var(--deep-purple);
-  transform: translateY(-2px);
+/* 代码块样式 */
+pre {
+  background-color: #f5f5f5;
+  padding: var(--space-md);
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: var(--space-md) 0;
 }
 
-.btn-secondary {
-  background-color: var(--light-orange);
-  color: var(--text-color);
-  border: 1px solid var(--deep-orange);
+code {
+  font-family: monospace;
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 
-.btn-secondary:hover {
-  background-color: var(--deep-orange);
-  color: var(--white);
+/* 表格样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-md) 0;
 }
 
-/* =============================================
-   FORM ELEMENTS
-   ============================================= */
-
-.form-group {
-  margin-bottom: var(--space-md);
+th, td {
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--gray);
+  text-align: left;
 }
 
-label {
-  display: block;
-  margin-bottom: var(--space-xs);
-  font-weight: 500;
+th {
+  background-color: var(--light-blue);
+  color: var(--deep-blue);
+}
+
+/* 表单样式 */
+form {
+  margin: var(--space-md) 0;
 }
 
 input, textarea, select {
   width: 100%;
-  padding: var(--space-sm);
-  border: 1px solid #ddd;
-  border-radius: var(--radius-sm);
-  font-family: inherit;
-  font-size: 1rem;
-  transition: border-color var(--transition-fast);
+  padding: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  font-family: var(--main-font);
 }
 
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: var(--deep-blue);
-  box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.2);
+/* ==================== 页面特定样式 ==================== */
+
+/* 首页样式 */
+body#home {
+  background-color: var(--light-blue);
 }
 
-/* =============================================
-   FOOTER
-   ============================================= */
-
-footer {
-  background-color: var(--deep-blue);
-  color: var(--white);
-  padding: var(--space-lg) 0;
-  text-align: center;
+body#home header {
+  background-color: var(--light-green);
+  color: var(--deep-blue);
 }
 
-.footer-content {
+body#home h1, body#home h2, body#home h3 {
+  color: var(--deep-blue);
+}
+
+/* 作品集页面样式 */
+body#portfolio {
+  background-color: var(--light-purple);
+}
+
+body#portfolio header {
+  background-color: var(--light-yellow);
+  color: var(--deep-purple);
+}
+
+body#portfolio h1, body#portfolio h2, body#portfolio h3 {
+  color: var(--deep-purple);
+}
+
+/* 全球目标页面样式 */
+body#goal {
+  background-color: var(--light-yellow);
+}
+
+body#goal header {
+  background-color: var(--light-orange);
+  color: var(--deep-green);
+}
+
+body#goal h1, body#goal h2, body#goal h3 {
+  color: var(--deep-green);
+}
+
+/* 设计页面样式 */
+body#design {
+  background-color: var(--light-orange);
+}
+
+body#design header {
+  background-color: var(--light-purple);
+  color: var(--deep-orange);
+}
+
+body#design h1, body#design h2, body#design h3 {
+  color: var(--deep-orange);
+}
+
+/* 无障碍页面样式 */
+body#accessibility {
+  background-color: var(--light-green);
+}
+
+body#accessibility header {
+  background-color: var(--light-blue);
+  color: var(--deep-purple);
+}
+
+body#accessibility h1, body#accessibility h2, body#accessibility h3 {
+  color: var(--deep-purple);
+}
+
+/* 幕后页面样式 */
+body#behind {
+  background-color: var(--light-purple);
+}
+
+body#behind header {
+  background-color: var(--light-yellow);
+  color: var(--deep-blue);
+}
+
+body#behind h1, body#behind h2, body#behind h3 {
+  color: var(--deep-blue);
+}
+
+/* ==================== 特殊组件 ==================== */
+
+/* 颜色展示块 */
+.color-display {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-links {
-  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-md);
   margin: var(--space-md) 0;
 }
 
-.social-links a {
-  color: var(--white);
-  font-size: 1.5rem;
-  transition: color var(--transition-fast);
-}
-
-.social-links a:hover {
-  color: var(--light-orange);
-}
-
-/* =============================================
-   UTILITY CLASSES
-   ============================================= */
-
-.text-center {
-  text-align: center;
-}
-
-.mt-sm { margin-top: var(--space-sm); }
-.mt-md { margin-top: var(--space-md); }
-.mt-lg { margin-top: var(--space-lg); }
-.mt-xl { margin-top: var(--space-xl); }
-
-.mb-sm { margin-bottom: var(--space-sm); }
-.mb-md { margin-bottom: var(--space-md); }
-.mb-lg { margin-bottom: var(--space-lg); }
-.mb-xl { margin-bottom: var(--space-xl); }
-
-/* =============================================
-   SPECIAL PAGE STYLES
-   ============================================= */
-
-/* 设计原则页面 */
-.design-principles {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-lg);
-}
-
-.principle-card {
-  background-color: var(--white);
-  padding: var(--space-md);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  border-top: 4px solid var(--deep-purple);
-}
-
-/* 无障碍指南 */
-.accessibility-checklist {
-  background-color: var(--white);
-  padding: var(--space-md);
-  border-radius: var(--radius-md);
-  margin: var(--space-lg) 0;
-}
-
-.checklist-item {
+.color-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
   display: flex;
-  align-items: flex-start;
-  margin-bottom: var(--space-sm);
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-sm);
+  color: var(--white);
+  text-shadow: 1px 1px 2px var(--black);
 }
 
-.checklist-item input {
-  margin-right: var(--space-sm);
-  flex-shrink: 0;
+/* 进度条 */
+.progress-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  margin: var(--space-md) 0;
 }
 
-/* =============================================
-   RESPONSIVE DESIGN
-   ============================================= */
-
-@media (max-width: 992px) {
-  html {
-    font-size: 15px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  nav ul {
-    gap: var(--space-md);
-  }
+.progress-bar {
+  height: 20px;
+  border-radius: 4px;
+  background-color: var(--deep-blue);
+  text-align: center;
+  color: var(--white);
+  line-height: 20px;
 }
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: var(--light-blue);
+  color: var(--deep-blue);
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: var(--space-xs);
+}
+
+/* ==================== 响应式设计 ==================== */
 
 @media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
-  
-  .nav-container {
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-  
   nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
   }
   
-  .hero {
-    padding: var(--space-lg) 0;
-  }
-  
-  .hero h1 {
+  header h1 {
     font-size: 2rem;
+  }
+  
+  .card {
+    padding: var(--space-sm);
   }
 }
 
-@media (max-width: 576px) {
-  .card-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  :root {
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
   }
   
-  .design-principles {
-    grid-template-columns: 1fr;
+  header {
+    padding: var(--space-lg) var(--space-sm);
+  }
+  
+  main {
+    padding: 0 var(--space-sm) var(--space-lg);
   }
 }
