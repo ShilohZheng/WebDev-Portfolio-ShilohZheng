@@ -27,13 +27,24 @@ body {
   min-height: 100vh;
 }
 
-/* Page-specific backgrounds */
-body#home { background-color: var(--light-blue); }
-body#accessibility { background-color: var(--light-green); }
-body#behind { background-color: var(--light-purple); }
-body#portfolio { background-color: var(--light-blue); }
-body#goal { background-color: var(--light-yellow); }
-body#design { background-color: var(--light-orange); }
+body#home {
+  background-color: var(--light-blue);
+}
+body#accessibility {
+  background-color: var(--light-green);
+}
+body#behind {
+  background-color: var(--light-purple);
+}
+body#portfolio {
+  background-color: var(--light-blue);
+}
+body#goal {
+  background-color: var(--light-yellow);
+}
+body#design {
+  background-color: var(--light-orange);
+}
 
 header {
   background-color: var(--light-green);
@@ -59,21 +70,21 @@ header p {
 nav {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2em;
   background-color: var(--light-orange);
-  padding: 1em 0;
+  padding: 1.5em;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   margin: 2em 0;
-  flex-wrap: wrap;
 }
 
 nav a {
   color: var(--deep-blue);
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.3em;
-  padding: 0.5em;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
   transition: all 0.3s ease;
   border: 2px solid transparent;
   border-radius: 5px;
@@ -146,10 +157,10 @@ button:hover {
 }
 
 footer {
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-align: center;
-  margin-top: 3em;
-  padding: 1.5em;
+  margin-top: 1.5em;
+  padding: 1em;
   background-color: var(--light-green);
   color: var(--deep-blue);
   border-radius: 8px;
@@ -169,7 +180,7 @@ footer {
   border-radius: 8px;
   text-align: center;
   font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* Code blocks for behind-the-scenes */
@@ -183,13 +194,8 @@ pre {
   margin: 1.5em 0;
 }
 
-/* ✅ Responsive: only applies to small screens */
+/* Responsive design */
 @media (max-width: 768px) {
-  body {
-    padding: 0 1em;
-    font-size: 1em;
-  }
-
   header h1 {
     font-size: 2.5em;
   }
@@ -203,6 +209,20 @@ pre {
   main {
     padding: 1.5em;
   }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  nav a {
+    font-size: 1.4em;
+  }
+
+  footer {
+    font-size: 1.3em;
+  }
+}
+
 
   h2 {
     font-size: 2em;
