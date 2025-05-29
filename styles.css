@@ -30,12 +30,6 @@ body {
 body#home {
   background-color: var(--light-blue);
 }
-body#accessibility {
-  background-color: var(--light-green);
-}
-body#behind {
-  background-color: var(--light-purple);
-}
 body#portfolio {
   background-color: var(--light-blue);
 }
@@ -43,8 +37,15 @@ body#goal {
   background-color: var(--light-yellow);
 }
 body#design {
-  background-color: var(--light-orange);
+  background-color: var(--light-yellow);
 }
+body#accessibility {
+  background-color: var(--light-purple);
+}
+body#behind {
+  background-color: var(--light-purple);
+}
+
 
 header {
   background-color: var(--light-green);
