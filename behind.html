@@ -2,42 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Behind the Scenes</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Behind the Curtain</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body id="behind">
   <header>
-    <h1>How I Built This Site</h1>
+    <h1>How I built this website?</h1>
+    <p>how I "peeked behind the curtain" of other websites</p>
   </header>
-  
-  <!-- Navigation same as index.html -->
-  
-  <main class="container">
-    <section>
-      <h2>Challenges & Solutions</h2>
-      <ul>
-        <li><strong>Responsive Layouts:</strong> Initially struggled with grids but mastered CSS Flexbox</li>
-        <li><strong>JavaScript Debugging:</strong> Used Chrome DevTools to fix button interactions</li>
-      </ul>
-      
-      <h3>Code Snippet</h3>
-      <pre><code>/* Simple Flexbox example */
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}</code></pre>
-    </section>
-    
-    <section>
-      <h2>Key Learnings</h2>
-      <p>"Planning layouts on paper first saves coding time!"</p>
-    </section>
-  </main>
 
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="goal.html">Global Goal</a>
+    <a href="design.html">Design</a>
+    <a href="accessibility.html">Accessibility</a>
+    <a href="behind.html">Behind</a>
+  </nav>
+
+    <main>
+    <section>
+      <h2>Code Screenshots</h2>
+      <p>These are screenshots of my HTML, CSS, and JavaScript code in Visual Studio Code. They show how I built the structure, styles, and simple interactions for my website.</p>
+      <img src="images/html-code.png" alt="HTML code screenshot" width="500">
+      <img src="images/css-code.png" alt="CSS code screenshot" width="500">
+      <img src="images/js-code.png" alt="JavaScript code screenshot" width="500">
+    </section>
+
+    <section>
+      <h2>Challenging Parts</h2>
+      <p>One of the hardest parts was using only one CSS file for the whole website. I had to use <code>id</code> and <code>class</code> to style each page differently while keeping the layout the same. It was also tricky to make sure all the links and styles worked on every page. In JavaScript, I struggled with making buttons work correctly. At first, my code didn’t do anything, but after using <code>console.log()</code> to test it, I fixed the mistakes.</p>
+    </section>
+
+    <section>
+      <h2>Using Developer Tools</h2>
+      <p>I used the browser Inspect tool (right-click &gt; Inspect) to check my code and see how the page looked in real time. This helped me fix problems with spacing and layout. I also used it to test changes to colors or fonts before editing my CSS file in VS Code.</p>
+    </section>
+
+    <section>
+      <h2>What I Learned</h2>
+      <p>I learned how to use folders to keep my stuff organized, like putting all my images in one place and linking my CSS file to each html file properly. I also learned how to use JavaScript to add simple actions, like changing text or colors when clicking a button. Using <code>getElementById</code> and <code>addEventListener</code> was new to me, but it was fun to see it work!</p>
+    </section>
+
+    <section>
+      <h2>Written Reflection</h2>
+      <p>
+        Creating this website was a big learning experience for me. Before this project, I didn’t know how to build a full website from scratch, but now I understand how HTML and CSS work together to create structure and design. I followed what I learned from the VS Code Edu Intro to Web Dev course. It showed me how to use tags like <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;img&gt;</code>, and how to connect them with CSS using class and id selectors.<br><br>
+
+        One of the biggest challenges I had was getting all my pages to work using only one CSS file. At first, I wanted each page to look a bit different, but I also didn’t want to make my life so complicated. I had to think carefully about how to use IDs for each page’s <code>&lt;body&gt;</code> tag and write specific styles in my CSS using <code>#pageID</code> to make small changes while still sharing most of the same layout and fonts. It was confusing at first, but after testing and organizing my code, I figured out a system that worked.<br><br>
+
+        Another problem I faced was with font sizes. Sometimes the text looked too big or too small on different pages, and I didn’t know why. I learned how to fix it by setting base font sizes in the <code>body</code> and using <code>em</code> or <code>rem</code> units in CSS. I also learned to use margins and padding to make the text look neat and easy to read. I had to go back many times and adjust things so everything would be balanced and clean.<br><br>
+
+        My navigation bar was causing me a lot of trouble at first. It was stacking vertically instead of showing the links in a row. I tried a lot of times on how to fix it, and finally use <code>display: inline-block</code> or <code>flex</code> to make it horizontal. I tested both and chose the one that worked best for my layout. Once the navbar looked good, I copied it to all my pages so everything stayed consistent.<br><br>
+
+        Overall, I learned that building a website is not just about writing code, but also about testing, fixing, and thinking about the user experience. I feel more confident now when I use HTML and CSS. I understand how to write clean code, organize folders, and make a site that works across multiple pages. I’m proud of the final result, as I never thought I can really create a website on my own, and I know this is just the beginning of what I can create.
+      </p>
+    </section>
+    <main>
+
+    
   <footer>
-    © 2025 Shiloh Zheng | Contact me: zhengyinuo0529@gmail.com
+    <p>© 2025 Shiloh Zheng | Web Development Portfolio</p>
   </footer>
+
 </body>
 </html>
+
+
