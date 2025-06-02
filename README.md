@@ -1,7 +1,5 @@
 # Shiloh's Web Development Portfolio
 
-![Portfolio Screenshot](screenshot.png)
-
 This is my personal portfolio website showcasing my journey in learning web development, with a focus on HTML, CSS, and JavaScript fundamentals.
 
 ## Features
