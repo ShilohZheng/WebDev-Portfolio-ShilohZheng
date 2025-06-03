@@ -7,14 +7,15 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     code, pre {
-      font-size: 0.85em;
+      font-size: 1em; /* 放大字体 */
       background: #f0f0f0;
-      padding: 0.3em 0.6em;
+      padding: 0.6em 1em;
       border-radius: 5px;
-      display: inline-block;
+      display: block; /* 让它独立换行 */
+      line-height: 1.5em;
     }
     pre {
-      margin: 0.4em 0;
+      margin: 0.8em 0;
       overflow-x: auto;
     }
   </style>
@@ -76,22 +77,26 @@
     </section>
 
     <section>
-    <h2>Responsive Design in Action</h2>
-    <div class="image-row">
-      <figure class="centered-image">
-        <img src="images/From Laptop.jpg" alt="Screenshot of the website on Windows desktop">
-        <figcaption>Viewing the site on a Windows computer using Chrome browser.</figcaption>
-      </figure>
-      <figure class="centered-image">
-        <img src="images/From Ipad.jpg" alt="Screenshot of the website on an iPad">
-        <figcaption>Browsing the site on an iPad shows tablet-friendly layout and spacing.</figcaption>
-      </figure>
-      <figure class="centered-image">
-        <img src="images/From Iphone.jpg" alt="Screenshot of the website on a mobile phone">
-        <figcaption>The site on a phone remains clean and easy to navigate.</figcaption>
-      </figure>
-    </div>
-  </section>
+      <h2>Responsive Design in Action</h2>
+      <div class="custom-image-layout">
+        <div class="left-column">
+          <figure class="centered-image">
+            <img src="images/From Laptop.jpg" alt="Screenshot of the website on Windows desktop">
+            <figcaption>Viewing the site on a Windows computer using Chrome browser.</figcaption>
+          </figure>
+          <figure class="centered-image">
+            <img src="images/From Ipad.jpg" alt="Screenshot of the website on an iPad">
+            <figcaption>Browsing the site on an iPad shows tablet-friendly layout and spacing.</figcaption>
+          </figure>
+        </div>
+        <div class="right-column">
+          <figure class="centered-image">
+            <img src="images/From Iphone.jpg" alt="Screenshot of the website on a mobile phone">
+            <figcaption>The site on a phone remains clean and easy to navigate.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
   </main>
 
