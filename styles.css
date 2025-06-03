@@ -66,11 +66,11 @@
   font-size: 2.5rem;
 }
 
-.skill-container {
+.skills-boxes {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* 或 nowrap + overflow-x: auto; 取决于需求 */
+  flex-wrap: wrap; /* 允许在小屏幕时换行 */
   margin-top: 2rem;
 }
 
@@ -84,6 +84,7 @@
   box-shadow: 0 4px 12px rgba(106, 29, 154, 0.25);
   text-align: left;
 }
+
 
 .skill-box ul {
   padding-left: 1.5rem;
