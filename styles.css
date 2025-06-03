@@ -300,6 +300,12 @@ footer {
   text-align: center;
 }
 
+.small-image {
+  max-width: 60%; 
+  height: auto; 
+  margin: 0 auto;
+}
+
 .image-row {
   display: flex;
   flex-wrap: wrap;
