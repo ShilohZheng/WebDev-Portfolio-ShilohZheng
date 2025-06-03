@@ -68,20 +68,21 @@
 
 .skill-container {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: center;
   gap: 2rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+  flex-wrap: wrap; /* 或 nowrap + overflow-x: auto; 取决于需求 */
+  margin-top: 2rem;
 }
 
 .skill-box {
+  flex: 0 0 280px;
   background-color: var(--light-purple);
   border: 2px solid var(--deep-purple);
   border-radius: 16px;
-  padding: 2.5rem;
-  width: 320px;
-  font-size: 1.4rem;
+  padding: 2rem;
+  font-size: 1.3rem;
   box-shadow: 0 4px 12px rgba(106, 29, 154, 0.25);
+  text-align: left;
 }
 
 .skill-box ul {
