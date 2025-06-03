@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shiloh's Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
 <body id="home">
-  <header>
-    <h1>Welcome to My Web Dev Journey</h1>
-    <p>Exploring coding one step at a time. Slowly progressing.</p>
-  </header>
+  <!-- Welcome Overlay -->
+  <div id="welcome-screen">
+    <div class="welcome-box">
+      <h1>Welcome to My Site</h1>
+      <button id="enter-button">Enter Website</button>
+    </div>
+  </div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="goal.html">Global Goal</a>
-    <a href="design.html">Design</a>
-    <a href="accessibility.html">Accessibility</a>
-    <a href="behind.html">Behind</a>
-  </nav>
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
+    <header>
+      <h1>Welcome to My Web Dev Journey</h1>
+      <p>Exploring coding one step at a time. Slowly progressing.</p>
+    </header>
 
-  <main class="container">
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I'm a high school sophomore who just started learning web development. Though my understanding of HTML, CSS, and JavaScript is still basic, I'm having a lot of passion towards this project currently, this is one of the major project I've done in the whole year of G11. This portfolio project has taught me so much, I cherish this first and probably the last time of building a website of my own!
-      </p>
-      <figure class="centered-image">
-        <img src="images/About Me.JPG" alt="A photo representing me" width="400" />
-        <figcaption>This is a picture taken very recently of me and my dog when travelling.</figcaption>
-      </figure>
-    </section>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="goal.html">Global Goal</a>
+      <a href="design.html">Design</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="behind.html">Behind</a>
+    </nav>
 
-    <section>
-      <h2>Why I Made This Website</h2>
-      <p>
-        This site is part of my Web Development class project. I built it completely from scratch. I created it to showcase my learning progress, share my thoughts on important global issues like wildlife protection, and explore creative design. I want to keep improving and maybe inspire some of my peers to try coding too! Anyways, I can show off to my friends of this website!
-      </p>
-    </section>
-  </main>
+    <main class="container">
+      <section>
+        <h2>About Me</h2>
+        <p>
+          I'm a high school sophomore who just started learning web development. Though my understanding of HTML, CSS, and JavaScript is still basic, I'm having a lot of passion towards this project currently, this is one of the major project I've done in the whole year of G11. This portfolio project has taught me so much, I cherish this first and probably the last time of building a website of my own!
+        </p>
+        <figure class="centered-image">
+          <img src="images/About Me.JPG" alt="A photo representing me" width="400" />
+          <figcaption>This is a picture taken very recently of me and my dog when travelling.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Why I Made This Website</h2>
+        <p>
+          This site is part of my Web Development class project. I built it completely from scratch. I created it to showcase my learning progress, share my thoughts on important global issues like wildlife protection, and explore creative design. I want to keep improving and maybe inspire some of my peers to try coding too! Anyways, I can show off to my friends of this website!
+        </p>
+      </section>
+    </main>
 
   <footer>
     © 2025 Shiloh Zheng | Contact me: zhengyinuo0529@gmail.com
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
