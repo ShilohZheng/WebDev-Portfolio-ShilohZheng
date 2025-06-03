@@ -37,8 +37,6 @@ This is my personal portfolio website showcasing my journey in learning web deve
 - JavaScript (Basic interactivity)
 - GitHub Pages (Hosting)
 
-## How to Run Locally
-
 ## ♿ Accessibility Features
 
 This website was built with accessibility as a core priority, implementing the following features:
