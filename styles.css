@@ -323,11 +323,11 @@ footer {
   max-width: 90%;
 }
 
-.double-image .image-row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+.double-image .image-row img {
+  width: 45%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .double-image img {
