@@ -317,6 +317,28 @@ footer {
   max-width: 45%;
 }
 
+.custom-image-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1 1 45%;
+}
+
+.right-column {
+  flex: 1 1 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Code blocks for behind-the-scenes */
 pre {
   background-color: #f5f5f5;
