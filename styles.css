@@ -258,3 +258,56 @@ pre {
     font-size: 1.3em;
   }
 }
+
+/* 欢迎页整体背景样式 */
+#welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--light-purple) url('images/About Me.JPG') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 半透明遮罩与文本框样式 */
+.welcome-overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 60px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 欢迎标题和说明文字 */
+.welcome-overlay h1 {
+  color: var(--deep-purple);
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.welcome-overlay p {
+  color: var(--deep-blue);
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* 进入按钮 */
+#enter-button {
+  background-color: var(--deep-purple);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#enter-button:hover {
+  background-color: var(--deep-blue);
+}
