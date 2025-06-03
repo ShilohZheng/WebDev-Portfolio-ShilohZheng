@@ -50,3 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleButton.textContent = isHidden ? 'Show Less' : 'Show More';
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const enterButton = document.getElementById('enter-button');
+  const welcomeScreen = document.getElementById('welcome-screen');
+  const mainContent = document.getElementById('main-content');
+
+  enterButton.addEventListener('click', function () {
+    welcomeScreen.style.display = 'none';
+    mainContent.style.display = 'block';
+  });
+});
+
