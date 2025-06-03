@@ -70,7 +70,7 @@
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* 允许在小屏幕时换行 */
+  flex-wrap: wrap; 
   margin-top: 2rem;
 }
 
