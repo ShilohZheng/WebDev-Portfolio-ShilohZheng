@@ -1,6 +1,7 @@
 # Shiloh's Web Development Portfolio
 
 This is my personal portfolio website showcasing my journey in learning web development, with a focus on HTML, CSS, and JavaScript fundamentals.
+You can find my website here: https://shilohzheng.github.io/WebDev-Portfolio-ShilohZheng/
 
 ## Features
 
